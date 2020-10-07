@@ -1,0 +1,51 @@
+{% include 'header.html' %}
+
+{% block header %}
+<title>Home</title>
+<div class="jumbotron jumbotron-fluid" style="background-color:burlywood;">
+    <div class="container">
+      <h1 class="display-4" style="font-family: 'Times New Roman', Times, serif; font-style: normal;">Welcome to Machine Learning Lab II</h1>
+      <p class="lead">You can checkout any assignment, you can navigate from the dropdown menu.</p>
+    </div>
+  </div>
+
+{% endblock %}
+                                                                                                                
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="background-color: bisque;">
+              <div class="card-body">
+                <h4 class="card-title">
+                    Assignment II
+                </h4>
+                <p class="card-description">
+                    Prepare model using MNIST, and CIFAR10 dataset. Cifar10 model is developed using both CNN and without CNN, and could be tried to see the difference in the outcomes, MNIST model is developed by using Dense Neural Network.
+                </p>
+                <div class="card-stats justify-content-center">
+                  <a href="{{url_for('a2.home')}}" class="btn btn-white btn-round">Go to Assignment II</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="background-color: bisque;">
+              <div class="card-body">
+                <h4 class="card-title">
+                   Assignment III
+                </h4>
+                <p class="card-description">
+                   Prepare Classifier on Cats and Dogs dataset available on kaggle. Have developed without using regularization. One can go ahead and try out both. 
+                </p>
+                <div class="card-stats justify-content-center">
+                  <a href="{{url_for('a3.home')}}" class="btn btn-white btn-round">Go to Assignment III</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+    
+{% endblock %}

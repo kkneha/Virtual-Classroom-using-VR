@@ -1,0 +1,58 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+}
+
+
+#sidebar {
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	background: #151719;
+	left: -200px;
+	transition: all 500ms linear;
+}
+
+#sidebar.active{
+	left: 0px;
+}
+
+#sidebar ul li {
+	color: white;
+	list-style: none;
+	padding: 25px 10px;
+	border-bottom: 1px solid gray;
+	text-align: center;
+}
+
+#sidebar ul li:hover{
+	background-color: rgb(176,234,230);
+	color: black;
+}
+
+#sidebar .toggle-btn {
+		position: absolute;
+		left: 230px;
+		top: 20px;
+}
+
+#sidebar .toggle-btn span {
+	display: block;
+	width: 30px;
+	height: 5px;
+	background: #151719;
+	margin: 5px 0px;
+}
+
+#card {
+	
+	padding-top: 50px;
+			padding-bottom: 350px;
+			padding-left: 450px;
+			padding-right: 450px;
+			background-image: url(image/e.jpg);
+			
+			background-size: 100%;
+	
+}
