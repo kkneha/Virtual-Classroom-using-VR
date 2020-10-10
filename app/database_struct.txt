@@ -1,0 +1,23 @@
+Student{
+    id : Integer
+    password : Hashed
+    type : 'S'
+    name : String
+    Dept : String
+    Year : Integer
+    Phone number : Integer
+}
+Teacher{
+    id : Integer
+    password : Hashed
+    type : 'T'
+    name : String
+    Dept : String
+    Phone number
+}
+Course{
+    teacher_id : Integer
+    student_id : Integer (FOREIGN)
+    Course_id: String (UNIQUE)
+    Course_name : String
+}
