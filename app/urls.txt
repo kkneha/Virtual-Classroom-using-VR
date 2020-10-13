@@ -1,0 +1,2 @@
+/auth/signup --> signup page
+/auth/signin --> signin page
