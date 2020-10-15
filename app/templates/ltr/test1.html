@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, AdminWrap lite admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, Nice admin lite design, Nice admin lite dashboard bootstrap 4 dashboard template">
+    <meta name="description"
+        content="Nice Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Virtual Classroom</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin-lite/" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='assets/images/favicon.png')}}">
+    <!-- Custom CSS -->
+    <link href="{{url_for('static', filename='dist/css/style.min.css')}}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-navbarbg="skin6" data-theme="light" data-layout="vertical" data-sidebartype="full"
+        data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar" data-navbarbg="skin6">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <div class="navbar-header" data-logobg="skin5">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+                        <i class="ti-menu ti-close"></i>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-brand">
+                        <a href="teacher.dashboard" class="logo">
+                            <!-- Logo icon -->
+                            <b class="logo-icon">
+                                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                                <!-- Dark Logo icon -->
+                                <img src="{{url_for('static', filename = 'assets/images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
+                                <!-- Light Logo icon -->
+                                <!--<img src="../../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />-->
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            <span class="logo-text">
+                                <!-- dark Logo text -->
+                                <img src="{{url_for('static', filename = 'assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
+                                <!-- Light Logo text -->
+                                <!--<img src="../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />-->
+                            </span>
+                        </a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" 
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="ti-more"></i>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin6">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-left mr-auto">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right">
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" 
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                    src="{{url_for('static', filename = 'assets/images/users/6.jpg')}}" alt="user" class="rounded-circle"
+                                    width="31"></a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                                <a class="dropdown-item" href="{{url_for('teacher.test')}}"><i class="ti-user m-r-5 m-l-5"></i>
+                                    My Profile</a>
+                                <a class="dropdown-item"><i class="ti-close m-r-5 m-l-5"></i>
+                                    Log Out</a>
+                                
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar" data-sidebarbg="skin5">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url_for('teacher.dashboard')}}"
+                                aria-expanded="false">
+                                <i class="mdi mdi-av-timer"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url_for('teacher.test')}}"
+                                aria-expanded="false">
+                                <i class="mdi mdi-account-network"></i>
+                                <span class="hide-menu">Profile</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url_for('teacher.test1')}}"
+                                aria-expanded="false">
+                                <i class="mdi mdi-arrange-bring-forward"></i>
+                                <span class="hide-menu">Courses</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">Courses</h4>
+                    </div>
+                    <div class="col-7 align-self-center">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="{{url_for('teacher.dashboard')}}">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card card-body">
+                            <h2 class="card-title">Courses</h2>
+                            <li class="nav-item search-box">
+                            <a class="nav-link waves-effect waves-dark">
+                                <div class="d-flex align-items-center">
+                                    <i class="mdi mdi-magnify font-20 mr-1"></i>
+                                    <div class="ml-1 d-none d-sm-block">
+                                        <span>Search</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter">
+                                <a class="srh-btn">
+                                    <i class="ti-close"></i>
+                                </a>
+                            </form>
+                        </li>
+                        <br>
+
+                            <form class="form-horizontal m-t-30">
+                                <div class="row">
+                                    
+                    <!-- column -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div>
+                        <input type="button" value="Add Row" style="background-color:green;color:white;width:130px; height:37px; margin-right: 60px;" onclick="addRow('dataTable')" />
+                        <input type="button" value="Delete Row" style="background-color:green;color:white;width:130px; height:37px;" onclick="deleteRow('dataTable')" />
+                        </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover" >
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">Check Box</th>
+                                            <th class="border-top-0">Topics</th>
+                                            <th class="border-top-0">Notes</th>
+                                            
+                                            <th class="border-top-0">Upload</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dataTable">
+                                        <tr table id="myTable">
+                                            <TD><INPUT type="checkbox" name="chk"/></TD>
+                                            <td class="txt-oflo"><input type="text" class="form-control form-control-line" name="txt"/></td>
+                                            <!--<td><span class="label label-success label-rounded">SALE</span> </td>-->
+                                            
+                                            <td class="txt-oflo"><input type="file" id="myFile" size="50"></td>
+                                            
+                                            <td><a >Upload</a></td>
+                                        </tr>
+                                        
+                                        
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                All Rights Reserved by Nice admin. Designed and Developed by
+                <a href="https://wrappixel.com">WrapPixel</a>.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="{{url_for('static', filename='assets/libs/jquery/dist/jquery.min.js')}}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{{url_for('static', filename='assets/libs/popper.js/dist/umd/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{{url_for('static', filename='assets/extra-libs/sparkline/sparkline.js')}}"></script>
+    <!--Wave Effects -->
+    <script src="{{url_for('static', filename='dist/js/waves.js')}}"></script>
+    <!--Menu sidebar -->
+    <script src="{{url_for('static', filename='dist/js/sidebarmenu.js')}}"></script>
+    <!--Custom JavaScript -->
+    <script src="{{url_for('static', filename='dist/js/custom.min.js')}}"></script>
+    <!--File Upload-->
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myFile").value;
+    }
+    </script>
+    <!--Add Button -->
+    <SCRIPT language="javascript">
+        function addRow(tableID) {
+
+            var table = document.getElementById(tableID);
+
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+
+            var colCount = table.rows[0].cells.length;
+
+            for(var i=0; i<colCount; i++) {
+
+                var newcell = row.insertCell(i);
+
+                newcell.innerHTML = table.rows[0].cells[i].innerHTML;
+                //alert(newcell.childNodes);
+                switch(newcell.childNodes[0].type) {
+                    case "text":
+                            newcell.childNodes[0].value = "";
+                            break;
+                    case "checkbox":
+                            newcell.childNodes[0].checked = false;
+                            break;
+                    case "select-one":
+                            newcell.childNodes[0].selectedIndex = 0;
+                            break;
+                }
+            }
+        }
+
+        function deleteRow(tableID) {
+            try {
+            var table = document.getElementById(tableID);
+            var rowCount = table.rows.length;
+
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if(null != chkbox && true == chkbox.checked) {
+                    if(rowCount <= 1) {
+                        alert("Cannot delete all the rows.");
+                        break;
+                    }
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+
+
+            }
+            }catch(e) {
+                alert(e);
+            }
+        }
+
+    </SCRIPT>
+</body>
+
+</html>

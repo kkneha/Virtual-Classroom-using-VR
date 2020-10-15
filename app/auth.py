@@ -64,6 +64,6 @@ def signin():
 
         flash(error)
 
-        return 'Helloworld'
+        return redirect('teacher.dashboard')
 
     return render_template('auth/signin.html')
