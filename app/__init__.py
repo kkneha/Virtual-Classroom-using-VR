@@ -4,7 +4,7 @@ from flask import Flask
 from flask import Flask, render_template, request
 import json
 from datetime import datetime
-from . import model, auth, teacher
+from . import model, auth, teacher, stream
 
 def create_app(test_config=None):
     # create and configure the app
@@ -29,6 +29,7 @@ def create_app(test_config=None):
    
     app.register_blueprint(auth.bp)
     app.register_blueprint(teacher.bp)
+    app.register_blueprint(stream.bp)
     return app
 
     """
