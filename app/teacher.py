@@ -17,3 +17,7 @@ def test():
 @bp.route('/test1', methods=('GET', 'POST'))
 def test1():
     return render_template('ltr/test1.html')
+
+@bp.route('/index', methods=('GET', 'POST'))
+def index():
+    return render_template('ltr/index.html')

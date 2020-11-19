@@ -67,3 +67,7 @@ def signin():
         return redirect('teacher.dashboard')
 
     return render_template('auth/signin.html')
+
+@bp.route('/head', methods=('GET', 'POST'))
+def head():
+    return render_template('auth/head.html')
