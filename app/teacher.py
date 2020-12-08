@@ -12,7 +12,7 @@ def dashboard():
 
 @bp.route('/test', methods=('GET', 'POST'))
 def test():
-    return render_template('ltr/test.html')
+    return render_template('ltr/index.html')
 
 @bp.route('/test1', methods=('GET', 'POST'))
 def test1():

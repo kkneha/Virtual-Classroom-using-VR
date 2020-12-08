@@ -8,7 +8,7 @@ bp = Blueprint('stream', __name__)
 @bp.route('/')
 def index():
     """Video streaming home page."""
-    return render_template('index.html')
+    return render_template('ltr/index.html')
 
 
 def gen(camera):
@@ -25,6 +25,8 @@ def video_feed():
     return Response(gen(Camera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
+def camera_release():
+    camera.release()
 
 if __name__ == '__main__':
    bp.run(host='0.0.0.0', port =80, debug=True, threaded=True)

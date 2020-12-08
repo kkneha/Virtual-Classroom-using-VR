@@ -5,5 +5,6 @@
 Teacher URLS ----- For rendering your UI, go to teacher.py --> write the path of your html file in rendertemplate
 ==================================================================================================================
 /teacher/dashboard --> Teacher dashboard
-/teacher/test --> For test.html
+/teacher/profile --> profile
+/teacher/vc --> For index.html ==> streaming
 /teacher/test1 --> for test1.html
