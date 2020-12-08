@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Virtual Class Signin</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+<style>
+body {
+  background-image: url("{{url_for('static', filename='images/img123.jpg')}}");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 90% 80%;
+  background-position: right top;
+}
+.button {
+  background-color: #ff5252;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style> 
+
+<body>
+  <div class="lp">
+    <div style="position:absolute; top:40px; left:30px;">
+        <h6 style="color:#9575cd; font-family: verdana; font-size: 44px;">Virtual</h6>
+    </div>
+    <div style="position:absolute; top:90px; left:30px;">
+        <h6 style="color:#ff1744; font-family: verdana; font-size: 44px;">Classroom</h6>
+    </div>
+    <div style="position:absolute; top:650px; left:650px;">
+        <a class="button" href="{{url_for('auth.register')}}" style='margin-right:70px'>Sign Up</a>
+        <a class="button" href="{{url_for('auth.signin')}}">Sign In</a>
+    </div> 
+  </div>
+</body>
+
+</html>
