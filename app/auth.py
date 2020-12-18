@@ -64,10 +64,7 @@ def signin():
 
         flash(error)
 
-        return redirect('teacher.dashboard')
+        return redirect(url_for('teacher.dashboard'))
 
     return render_template('auth/signin.html')
 
-@bp.route('/head', methods=('GET', 'POST'))
-def head():
-    return render_template('auth/head.html')

@@ -1,0 +1,83 @@
+<html>
+  <head>
+	<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+	<title>VR Mode</title>
+
+  </head>
+  <body>
+	 <a-scene id="scene">
+		 <a-sky color="black"></a-sky>
+		<!--  <a-box id="box1"></a-box> -->
+	
+
+      <!-- <a-box id="box" position="-1 0.5 -2" color="#4CC3D9"></a-box>  --> 
+      <!--  <a-sphere id="sphere" position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+	  <a-cylinder id="cylinder" position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>  -->
+	
+	</a-scene>
+	<!-- <script src="{{url_for('static', filename='js/index.js') }}"></script> -->
+	<script>
+		var scene = document.querySelector('#scene');
+			var x = {{ obj_no }};
+			console.log(x)
+			function create_abox(){
+				var box = document.createElement('a-box');
+				box.setAttribute(
+					'color', 'blue'    
+				)
+				box.setAttribute(
+					'position', '-1 0.5 -2'
+				)
+				return box;
+			}
+
+			function create_asphere(){
+				var sphere = document.createElement('a-sphere');
+				sphere.setAttribute(
+					'color', 'blue'
+				)
+				sphere.setAttribute(
+					'position', '0 1.25 -5'
+				)
+				sphere.setAttribute(
+					'radius', '1.25'
+				)
+				return sphere;
+			}
+
+			function create_acylinder(){
+				var cylinder = document.createElement('a-cylinder');
+				cylinder.setAttribute(
+					'color', 'blue'
+				)
+				cylinder.setAttribute(
+					'position', '-1 0.5 -2'
+				)
+				cylinder.setAttribute(
+					'radius', '0.5'
+				)
+				cylinder.setAttribute(
+					'height','1.5'
+				)
+				return cylinder;
+			}
+
+			var obj;
+			switch(x)
+			{ 
+				case 0:
+					obj = create_abox()
+					break;
+				case 1:
+					obj = create_asphere()
+					break;
+				case 2:
+					obj = create_acylinder()
+					break;
+			}
+			scene.appendChild(obj) 
+
+	</script>
+	
+  </body>
+</html>

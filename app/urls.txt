@@ -1,3 +1,6 @@
+/  --> index page 
+
+
 /auth/signup --> signup page
 /auth/signin --> signin page
 
@@ -8,3 +11,13 @@ Teacher URLS ----- For rendering your UI, go to teacher.py --> write the path of
 /teacher/profile --> profile
 /teacher/vc --> For index.html ==> streaming
 /teacher/test1 --> for test1.html
+
+
+/teacher/vr ---> for vr content
+
+==================================================================================================================
+Student URLS ----- For rendering your UI, go to student.py --> write the path of your html file in rendertemplate
+==================================================================================================================
+/student/dashboard --> Student dashboard
+/student/courses --> Student courses
+/student/profile --> Profile 
