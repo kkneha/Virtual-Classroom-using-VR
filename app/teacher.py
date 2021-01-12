@@ -24,6 +24,10 @@ def test1():
 def index():
     return render_template('ltr/index.html')
 
+@bp.route('/teacher/input')
+def input_audio():
+    return render_template('ltr/input.html')
+    
 @bp.route('/teacher/VR', methods=('GET', 'POST'))
 def vr():
     obj_no = recognise_model()

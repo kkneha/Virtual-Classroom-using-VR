@@ -1,0 +1,14 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Page</title>
+</head>
+<body>
+    <div class="input" style="align-items: center;"> 
+        <h1>Please provide your input by voice</h1>
+        <img src="{{ url_for('static', filename='images/microphone.svg') }}" onclick="window.location.href='{{ url_for( 'teacher.vr' ) }}';" style="width: 50px; height: 45px;" alt="mic-icon">
+    </div>
+   
+</body>
+</html>
